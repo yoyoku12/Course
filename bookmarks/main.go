@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-type stringMap = map[string]string
+type stringMap = map[string]string // создаем алиас мап стринг стринг для удобства.
 
 func main() {
 	m := stringMap{
