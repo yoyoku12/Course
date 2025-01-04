@@ -4,8 +4,10 @@ import (
 	"fmt"
 )
 
+type stringMap = map[string]string
+
 func main() {
-	m := map[string]string{
+	m := stringMap{
 		"PurpleSchool": "https://purpleschool.ru",
 		"Yandex":       "https://yandex.ru",
 		"Google":       "https://google.com",
@@ -51,7 +53,7 @@ func readInputString() string {
 	return input
 }
 
-func createBookmark(m map[string]string) map[string]string {
+func createBookmark(m stringMap) stringMap {
 	var name string
 	var site string
 	fmt.Println("Введите наименование закладки: ")
@@ -63,7 +65,7 @@ func createBookmark(m map[string]string) map[string]string {
 	return m
 }
 
-func deleteBookmark(m map[string]string) map[string]string {
+func deleteBookmark(m stringMap) stringMap {
 	fmt.Println("Вот полный список имеющихся закладок:")
 	showAllBookmarks(m)
 	fmt.Println("Введите имя закладки для удаления:")
@@ -73,7 +75,7 @@ func deleteBookmark(m map[string]string) map[string]string {
 	return m
 }
 
-func showAllBookmarks(m map[string]string) {
+func showAllBookmarks(m stringMap) {
 	for key, value := range m {
 		fmt.Println(key, value)
 	}
