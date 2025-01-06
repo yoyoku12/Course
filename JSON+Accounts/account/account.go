@@ -213,6 +213,6 @@ func FindAccountByUrl() string {
 		}
 	}
 
-	return "аккаунты с таким URL s не найдены"
+	return "аккаунты с таким URL не найдены"
 
 }
